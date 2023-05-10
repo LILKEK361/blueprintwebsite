@@ -2,6 +2,7 @@
     import Navbar from "../lib/components/ui/Navbar.svelte";
 
     import ColorTable from "$lib/components/ui/ColorTable.svelte";
+    export let pagenumber = 0;
 
 
 </script>
@@ -13,7 +14,14 @@
     </div>
     <div class="flex h-[90vh] w-[100%] items-center justify-center">
         <div class="">
-            <ColorTable></ColorTable>
+
+            {#if pagenumber === 0}
+                <ColorTable></ColorTable>
+                {:else if pagenumber === 1}
+                {:else if pagenumber === 2}
+
+
+                {/if}
 
         </div>
 
