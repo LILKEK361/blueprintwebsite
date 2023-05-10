@@ -1,6 +1,6 @@
 <script lang="ts">
     import Navbar from "../lib/components/ui/Navbar.svelte";
-    import BuyCard from "$lib/components/ui/BuyCard.svelte";
+
     import ColorTable from "$lib/components/ui/ColorTable.svelte";
 
 

@@ -10,14 +10,14 @@
                 </svg>
             </label>
             <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                <li><a>Page 1</a></li>
+                <li><a href="../../../routes/+page.svelte">Page 1</a></li>
                 <li><a>Page 2</a></li>
                 <li><a>Page 3</a></li>
             </ul>
         </div>
     </div>
     <div class="navbar-center">
-        <a class="btn btn-ghost normal-case text-xl">Title Here</a>
+        <a class="btn btn-ghost normal-case text-xl">Color Buy</a>
     </div>
     <div class="navbar-end">
         <button class="btn btn-ghost btn-circle">
@@ -39,10 +39,11 @@
                                         </div>
                                         <p class="pl-10">Name: Nick Hillmann <br> Age: 18 <br> Job: None <br> Hobbys: Codding, Video Games</p>
                                     </div>
+                                    <div class="card-actions justify-end">
+                                        <a class="bg-secondary text-black rounded-full p-3" href="https://github.com/LILKEK361" target="_blank">GitHub</a>
+                                    </div>
                                 </div>
-                                <div class="card-actions justify-end">
-                                    <a class="bg-secondary rounded-full p-3" href="https://github.com/LILKEK361" target="_blank">GitHub</a>
-                                </div>
+
                             </div>
                         </div>
                     </li>
