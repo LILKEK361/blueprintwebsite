@@ -18,7 +18,10 @@
             {#if pagenumber === 0}
                 <ColorTable></ColorTable>
                 {:else if pagenumber === 1}
+                    <ColorTable></ColorTable>
+
                 {:else if pagenumber === 2}
+                    <ColorTable></ColorTable>
 
 
                 {/if}
