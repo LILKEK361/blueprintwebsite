@@ -1,6 +1,7 @@
 <script lang="ts">
     import Navbar from "../lib/components/ui/Navbar.svelte";
     import BuyCard from "$lib/components/ui/SnusCard.svelte";
+    import OverAllSnusList from "$lib/components/ui/OverAllSnusList.svelte";
 
 
 
@@ -16,8 +17,7 @@
     <div class="flex h-[90vh] w-[100%] items-center justify-center">
         <div class="flex">
 
-            <BuyCard snus="Velo Artic Forst"></BuyCard>
-            <BuyCard snus="Velo Artic Forst"></BuyCard>
+        <OverAllSnusList></OverAllSnusList>
 
         </div>
 
