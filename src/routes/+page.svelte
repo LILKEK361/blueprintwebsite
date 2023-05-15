@@ -1,13 +1,10 @@
 <script lang="ts">
     import Navbar from "../lib/components/ui/Navbar.svelte";
+    import BuyCard from "$lib/components/ui/SnusCard.svelte";
 
-    import ColorTable from "$lib/components/ui/ColorTable.svelte";
 
-    let pagenumber = 0;
-    export  function setPage(number){
-        pagenumber = number
-        console.log(pagenumber)
-    }
+
+
 
 </script>
 
@@ -17,9 +14,10 @@
         <Navbar  />
     </div>
     <div class="flex h-[90vh] w-[100%] items-center justify-center">
-        <div class="">
+        <div class="flex">
 
-            <ColorTable></ColorTable>
+            <BuyCard snus="Velo Artic Forst"></BuyCard>
+            <BuyCard snus="Velo Artic Forst"></BuyCard>
 
         </div>
 

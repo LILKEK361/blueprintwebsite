@@ -9,7 +9,7 @@
 
     </div>
     <div class="navbar-center">
-        <a class="btn btn-ghost normal-case text-xl">Color Buy</a>
+        <a class="btn btn-ghost normal-case text-xl">Snus Operator</a>
     </div>
     <div class="navbar-end">
         <button class="btn btn-ghost btn-circle">
@@ -27,7 +27,7 @@
                                 <div class="flex p-3">
                                     <div class="avatar">
                                         <div class="w-24 rounded-full">
-                                            <img src="src/lib/components/assets/Nick 02.jpeg" width="auto" height="auto"/>
+                                            <img src="" width="auto" height="auto"/>
                                         </div>
                                         <p class="pl-10">Name: Nick Hillmann <br> Age: 18 <br> Job: None <br> Hobbys: Codding, Video Games</p>
                                     </div>
