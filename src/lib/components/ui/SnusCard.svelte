@@ -1,6 +1,6 @@
 <script>
 
-
+    import {writeSnusData} from "$lib/firebasedb.ts";
     export let name;
 
     //Data will be moved later
@@ -28,7 +28,8 @@
             }
         } }
 
-
+    writeSnusData("Berry Madness", allsnus.BerryMadness)
+    writeSnusData("Velo Artic Frost", allsnus.VeloArticForst)
 
 </script>
 
