@@ -50,16 +50,19 @@ export function readSnusData(){
     return snusData
 }
 
-export function readSnusNames(){
+export async function readSnusNames(){
     const startCountRef = ref(db,"/")
     let snusNames : String[] = [];
-    onValue(startCountRef, (snapshot) => {
-        snapshot.forEach((childSnapshot) => {
-            // @ts-ignore
-            snusNames = [...snusNames, childSnapshot.key]
-
+    try {
+        onValue(startCountRef, (snapshot) => {
+            const data = snapshot.val();
+            snusNames = data.getKey();
+        }, {
+            onlyOnce : true
         });
-    }, );
+        return snusNames;
+    } catch (e){
+        console.log(e)
+    }
 
-    return snusNames
 }

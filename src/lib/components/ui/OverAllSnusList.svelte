@@ -6,11 +6,11 @@ import {readSnusData, readSnusNames} from "$lib/firebasedb";
 
 
     const snusData = readSnusData();
-    console.log(snusData)
+    console.log("SnusData:"+snusData)
 
     let snusNames = readSnusNames();
-    console.log(snusNames)
 
+    console.log("SnusNames: " + snusNames)
 
 
 </script>
@@ -18,7 +18,7 @@ import {readSnusData, readSnusNames} from "$lib/firebasedb";
 <div class="flex">
 
     {#each snusNames as thing}
-        <SnusCard link={snusData[thing].Link} name={snusData[thing].Name} Ratings={snusData[thing].Rating}></SnusCard>
+        <SnusCard link={snusData[thing].Link} name={snusData[thing].Name}></SnusCard>
         {/each}
 
 </div>
