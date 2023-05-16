@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, set } from "firebase/database";
+import { getDatabase, ref, set, onValue } from "firebase/database";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -22,3 +22,44 @@ const app = initializeApp(firebaseConfig);
 // Initialize Realtime Database and get a reference to the service
 const db = getDatabase(app);
 
+export function writeSnusData(Name : String) {
+
+    set(ref(db, "/" + Name), {
+        Name: "",
+        Link: "",
+        Rating : {
+            Taste : 0,
+            Look  : 0,
+            Box   : 0,
+            Smell : 0,
+            Overall : 0
+        }
+    });
+}
+
+export function readSnusData(){
+    const startCountRef = ref(db, "/");
+    let snusData;
+    onValue(startCountRef, (snapshot) => {
+        const data = snapshot.val();
+        snusData = data;
+    }, {
+        onlyOnce : true
+    });
+
+    return snusData
+}
+
+export function readSnusNames(){
+    const startCountRef = ref(db,"/")
+    let snusNames : String[] = [];
+    onValue(startCountRef, (snapshot) => {
+        snapshot.forEach((childSnapshot) => {
+            // @ts-ignore
+            snusNames = [...snusNames, childSnapshot.key]
+
+        });
+    }, );
+
+    return snusNames
+}
