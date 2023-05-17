@@ -55,10 +55,11 @@ export async function readSnusNames(){
     let snusNames : String[] = [];
     try {
         onValue(startCountRef, (snapshot) => {
+
             const data = snapshot.val();
             snusNames = data.getKey();
         }, {
-            onlyOnce : true
+            onlyOnce :  true
         });
         return snusNames;
     } catch (e){
