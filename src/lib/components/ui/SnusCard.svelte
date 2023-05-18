@@ -1,11 +1,12 @@
 <script>
 
-    import {writeSnusData} from "$lib/firebasedb.ts";
+
     export let name;
     export let link
-    export const Ratings = {};
+    export let Ratings;
+    console.log(Ratings)
 
-    //Data will be moved later
+
 
 
 
@@ -13,7 +14,7 @@
 
 
 <div class="card w-96 bg-base-300 shadow-xl pt-10  m-5">
-    <figure class="text-center"><img src={link} alt={name}/></figure>
+    <figure class="text-center w-[auto] h-[auto]"><img src={link} alt={name}/></figure>
     <div class="card-body">
         <h2 class="card-title">Snus: {name} </h2>
         <p>Rating Overall: {Ratings.Overall} </p>
@@ -28,7 +29,7 @@
     <div class="modal-box">
         <h3 class="font-bold text-lg">Snus: {name}</h3>
         {#each Object.entries(Ratings) as [title,value]}
-            <p class="text-xl p-1">{title}: {value + "/5"} <p>
+            <p class="text-xl p-1">{title}: {value + "/10"} <p>
         {/each}
 
 

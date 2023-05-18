@@ -1,16 +1,14 @@
 <script lang="ts">
 
 
+import {alldata} from "$lib/assets/data/snusData";
 import SnusCard from "$lib/components/ui/SnusCard.svelte";
-import {readSnusData, readSnusNames} from "$lib/firebasedb";
 
 
-    const snusData = readSnusData();
-    console.log("SnusData:"+snusData)
+    let snusNames = Object.keys(alldata);
+    console.log(snusNames)
+    let snusData = alldata
 
-    let snusNames = readSnusNames();
-
-    console.log("SnusNames: " + snusNames)
 
 
 </script>
@@ -18,7 +16,7 @@ import {readSnusData, readSnusNames} from "$lib/firebasedb";
 <div class="flex">
 
     {#each snusNames as thing}
-        <SnusCard link={snusData[thing].Link} name={snusData[thing].Name}></SnusCard>
+        <SnusCard link={snusData[thing].Link} name={snusData[thing].Name} Ratings={snusData[thing].Ratings}></SnusCard>
         {/each}
 
 </div>
