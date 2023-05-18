@@ -3,11 +3,15 @@
 
 import {alldata} from "$lib/assets/data/snusData";
 import SnusCard from "$lib/components/ui/SnusCard.svelte";
+import {readSnusData} from "../../../firebase.ts";
 
 
-    let snusNames = Object.keys(alldata);
+
+
+    let snusData = readSnusData
+    let snusNames = Object.keys(snusData);
+
     console.log(snusNames)
-    let snusData = alldata
 
 
 

@@ -1,10 +1,11 @@
 <script>
 
+    readSnusData()
 
     export let name;
     export let link
     export let Ratings;
-    console.log(Ratings)
+
 
 
 
@@ -13,8 +14,8 @@
 </script>
 
 
-<div class="card w-96 bg-base-300 shadow-xl pt-10  m-5">
-    <figure class="text-center w-[auto] h-[auto]"><img src={link} alt={name}/></figure>
+<div class="card w-[%] bg-base-300 shadow-xl pt-10  m-5">
+    <figure class="text-center w-[100%] h-[auto]"><img src={link} alt={name}/></figure>
     <div class="card-body">
         <h2 class="card-title">Snus: {name} </h2>
         <p>Rating Overall: {Ratings.Overall} </p>
