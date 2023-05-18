@@ -1,26 +1,41 @@
 <script lang="ts">
 
+import {onMount} from "svelte";
+
 
 import {alldata} from "$lib/assets/data/snusData";
 import SnusCard from "$lib/components/ui/SnusCard.svelte";
-import {readSnusData} from "../../../firebase.ts";
+import {awaitData, readSnusData} from "../../../firebase.ts";
 
 
 
 
-    let snusData = readSnusData
-    let snusNames = Object.keys(snusData);
+export let snusData;
 
-    console.log(snusNames)
+
+console.log(snusData)
+
+
+
+
 
 
 
 </script>
 
 <div class="flex">
-
-    {#each snusNames as thing}
-        <SnusCard link={snusData[thing].Link} name={snusData[thing].Name} Ratings={snusData[thing].Ratings}></SnusCard>
+    {#if snusData}
+        {#each Object.keys(snusData) as thing}
+            <SnusCard
+                    link={snusData[thing]?.Link || ""}
+                    name={snusData[thing]?.Name || ""}
+                    Ratings={snusData[thing]?.Ratings || ""}
+            ></SnusCard>
         {/each}
+    {:else}
+        <p>Loading</p>
+    {/if}
+
+
 
 </div>

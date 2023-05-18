@@ -19,13 +19,29 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app)
 
 
-export function readSnusData()  {
+export  async function readSnusData(callback : any)  {
     let startRef = ref(db, "/")
-    let Data;
-    onValue(startRef, (snapshot) => {
-        Data = snapshot.val()
-        console.log(Data)
+    let Data = {};
+    try {
+         await onValue(startRef, (snapshot) => {
 
-    })
+                Data = snapshot.val()
+                 console.log("readData: " + Data)
+                callback(Data)
+            },
+            {onlyOnce : true})
+    }catch (e) {
+        console.log(e)
+    }
 
 }
+
+export async function awaitData(){
+    let Data
+    await readSnusData((readData : any) =>{
+        Data = readData
+
+    });
+    return Data
+}
+
