@@ -27,9 +27,16 @@ console.log(snusData)
     {#if snusData}
         {#each Object.keys(snusData) as thing}
             <SnusCard
-                    link={snusData[thing]?.Link || ""}
-                    name={snusData[thing]?.Name || ""}
-                    Ratings={snusData[thing]?.Ratings || ""}
+                    link={snusData[thing]?.Link || "Link"}
+                    name={snusData[thing]?.Name || "Name"}
+
+                    Ratings={snusData[thing]?.Ratings || {
+            Smell : 6,
+            Taste : 8,
+            Box : 5,
+            Tast : 7,
+            Overall : 6.5
+        }}
             ></SnusCard>
         {/each}
     {:else}
