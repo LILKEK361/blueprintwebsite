@@ -10,10 +10,6 @@ import {awaitData, readSnusData} from "../../../firebase.ts";
 
 
 
-export let snusData;
-
-
-console.log(snusData)
 
 
 
@@ -24,24 +20,7 @@ console.log(snusData)
 </script>
 
 <div class="flex">
-    {#if snusData}
-        {#each Object.keys(snusData) as thing}
-            <SnusCard
-                    link={snusData[thing]?.Link || "Link"}
-                    name={snusData[thing]?.Name || "Name"}
-
-                    Ratings={snusData[thing]?.Ratings || {
-            Smell : 6,
-            Taste : 8,
-            Box : 5,
-            Tast : 7,
-            Overall : 6.5
-        }}
-            ></SnusCard>
-        {/each}
-    {:else}
-        <p>Loading</p>
-    {/if}
+    //Empty Table
 
 
 
