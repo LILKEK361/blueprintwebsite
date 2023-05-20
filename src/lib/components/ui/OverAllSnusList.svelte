@@ -20,8 +20,35 @@ import {awaitData, readSnusData} from "../../../firebase.ts";
 </script>
 
 <div class="flex">
-    //Empty Table
 
 
+    <SnusCard
+            name={"Name..."}
+            link={"Link..."}
+            info={"ShortInfo..."}
+            price={0.00}
+            details={"Details..."}>
+    </SnusCard>
+    <SnusCard
+            name={"Name..."}
+            link={"Link..."}
+            info={"ShortInfo..."}
+            price={0.00}
+            details={"Details..."}>
+    </SnusCard>
+    <SnusCard
+            name={"Name..."}
+            link={"Link..."}
+            info={"ShortInfo..."}
+            price={0.00}
+            details={"Details..."}>
+    </SnusCard>
+    <SnusCard
+            name={"Name..."}
+            link={"Link..."}
+            info={"ShortInfo..."}
+            price={0.00}
+            details={"Details..."}>
+    </SnusCard>
 
 </div>
