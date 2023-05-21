@@ -19,7 +19,7 @@ import {awaitData, readSnusData} from "../../../firebase.ts";
 
 </script>
 
-<div class="flex">
+<div class="flex ">
 
 
     <SnusCard
