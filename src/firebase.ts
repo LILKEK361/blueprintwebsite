@@ -1,5 +1,7 @@
 
+// @ts-ignore
 import { initializeApp } from "firebase/app";
+// @ts-ignore
 import { getDatabase, onValue, ref } from "firebase/database";
 
 
@@ -23,7 +25,7 @@ export  async function readSnusData(callback : any)  {
     let startRef = ref(db, "/")
     let Data = {};
     try {
-         await onValue(startRef, (snapshot) => {
+         await onValue(startRef, (snapshot : any) => {
 
                 Data = snapshot.val()
                  console.log("readData: " + Data)
