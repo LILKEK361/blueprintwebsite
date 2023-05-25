@@ -38,7 +38,7 @@ import SnusCard from "$lib/components/ui/SnusCard.svelte";
             link={"Link... "}
             info={"ShortInfo..."}
             price={0.00}
-            details={"Details..."}>
+            details={"Details...."}>
     </SnusCard>
     <SnusCard
             link={"Link..."}
