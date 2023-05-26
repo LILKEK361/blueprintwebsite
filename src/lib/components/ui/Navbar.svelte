@@ -1,6 +1,6 @@
 <script lang="ts">
     export let pages : string[] = []
-
+    export let head : string
     const AllPages = {"OverAllList" : "/", "Trending" : "/Trendingpage"}
 
 </script>
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="navbar-center">
-            <a class="btn btn-ghost normal-case text-xl">Products</a>
+            <a class="btn btn-ghost normal-case text-xl">{head}</a>
         </div>
         <div class="navbar-end">
             <button class="btn btn-ghost btn-circle">

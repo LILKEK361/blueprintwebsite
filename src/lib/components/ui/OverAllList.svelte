@@ -1,39 +1,24 @@
 <script lang="ts">
 
-import {onMount} from "svelte";
-
-
-import {alldata} from "$lib/assets/data/snusData";
+import RowComponent from "$lib/components/ui/RowComponent.svelte";
 import SnusCard from "$lib/components/ui/ProductCard.svelte";
 
 </script>
 
-<div class="flex">
+<div class="pt-40">
+    <ul>
+        <li><RowComponent></RowComponent></li>
+        <li><RowComponent></RowComponent></li>
+        <li><RowComponent></RowComponent></li>
+        <li><RowComponent></RowComponent></li>
+        <li><RowComponent></RowComponent></li>
+        <li><RowComponent></RowComponent></li>
+        <li><RowComponent></RowComponent></li>
+        <li><RowComponent></RowComponent></li>
+        <li><RowComponent></RowComponent></li>
+        <li><RowComponent></RowComponent></li>
+        <li><RowComponent></RowComponent></li>
+        <li><RowComponent></RowComponent></li>
 
-
-    <SnusCard
-            link={"Link..."}
-            info={"ShortInfo..."}
-            price={0.00}
-            details={"Details..."}>
-    </SnusCard>
-    <SnusCard
-            link={"Link..."}
-            info={"ShortInfo..."}
-            price={0.00}
-            details={"Details..."}>
-    </SnusCard>
-    <SnusCard
-            link={"Link... "}
-            info={"ShortInfo..."}
-            price={0.00}
-            details={"Details...."}>
-    </SnusCard>
-    <SnusCard
-            link={"Link..."}
-            info={"ShortInfo..."}
-            price={0.00}
-            details={"Details..."}>
-    </SnusCard>
-
+    </ul>
 </div>
