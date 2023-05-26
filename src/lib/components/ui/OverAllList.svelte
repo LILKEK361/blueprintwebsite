@@ -4,18 +4,7 @@ import {onMount} from "svelte";
 
 
 import {alldata} from "$lib/assets/data/snusData";
-import SnusCard from "$lib/components/ui/SnusCard.svelte";
-
-
-
-
-
-
-
-
-
-
-
+import SnusCard from "$lib/components/ui/ProductCard.svelte";
 
 </script>
 

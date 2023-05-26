@@ -1,9 +1,7 @@
 <script lang="ts">
-    import Navbar from "../lib/components/ui/Navbar.svelte";
-    import BuyCard from "$lib/components/ui/SnusCard.svelte";
-    import OverAllSnusList from "$lib/components/ui/OverAllSnusList.svelte";
 
-
+    import OverAllList from "$lib/components/ui/OverAllList.svelte";
+    import Navbar from "$lib/components/ui/Navbar.svelte";
 
 
 
@@ -12,13 +10,12 @@
 
 
 <div class="overflow-hidden h-[100vh] w-[100vw]">
-    <div class="h-[10vh]">
-        <Navbar  />
-    </div>
+    <Navbar pages={["Trending"]}></Navbar>
     <div class="flex h-[90vh] w-[100%] items-center justify-center">
         <div class="flex">
 
-        <OverAllSnusList></OverAllSnusList>
+
+<OverAllList></OverAllList>
 
         </div>
 
