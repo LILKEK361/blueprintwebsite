@@ -10,8 +10,8 @@
 
 
 <div class="overflow-hidden h-[100vh] w-[100vw]">
-    <Navbar pages={["Trending"] }  head="Trending"> </Navbar>
-    <div class="flex h-[90vh] w-[100%] items-center justify-center overflow-x-hidden overflow-y-scroll">
+    <Navbar pages={["Trending"] }  head="OverAllList"> </Navbar>
+    <div class="flex h-[90vh] w-[100vw] items-center justify-center overflow-x-hidden overflow-y-scroll">
 
 
 

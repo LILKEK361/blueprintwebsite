@@ -11,7 +11,7 @@
 </script>
 
 
-<div class="card  bg-base-300 shadow-xl   m-5">
+<div class="card w-[20vw] bg-base-300 shadow-xl   m-5">
     <figure class="text-center "><img alt={name} src="src/lib/assets/data/img.png"/></figure>
     <div class="card-body">
         <h2 class="card-title">Name: {name} </h2>

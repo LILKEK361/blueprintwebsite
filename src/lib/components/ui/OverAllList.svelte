@@ -5,10 +5,11 @@ import SnusCard from "$lib/components/ui/ProductCard.svelte";
 
 </script>
 
-<div class="pt-40">
-    <ul>
-        <li><RowComponent></RowComponent></li>
-        <li><RowComponent></RowComponent></li>
+<div class="w-[100%] h-[100%] pt-[60vh] flex justify-center items-center ">
+
+    <ul class="overflow-hidden">
+
+        <li ><RowComponent></RowComponent></li>
         <li><RowComponent></RowComponent></li>
         <li><RowComponent></RowComponent></li>
         <li><RowComponent></RowComponent></li>
