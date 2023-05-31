@@ -6,6 +6,7 @@
     export let info;
     export let details;
     export let price;
+    export let view;
 
 
 </script>
@@ -15,6 +16,8 @@
     <figure class="text-center "><img alt={name} src="src/lib/assets/data/img.png"/></figure>
     <div class="card-body">
         <h2 class="card-title">Name: {name} </h2>
+
+
         <p>Short Info: {info} </p>
         <div class="card-actions justify-end">
             <label for="my-modal" class="btn">{"More Info"}</label>
