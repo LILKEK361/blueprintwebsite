@@ -1,8 +1,8 @@
 <script lang="ts">
 
 </script>
-<div>
-    <h1>Trending</h1>
+<div class="flex justify-center items-center w-[100%] h-[100%]" >
+
     <!-- Sorting system -->
-    <div>List Here</div>
+    <div class="w-[75%] h-[100%] border-purple-800 border-2">List Here</div>
 </div>
